@@ -1,0 +1,329 @@
+body {
+    margin: 100px;
+    background-color: rgb(183, 210, 221);
+    background-origin: padding-box;
+    
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #ecc2c2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 1000;
+
+}
+
+.nav-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-actions {
+    display: flex;
+}
+
+.nav-actions button {
+    background-color: #552424;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.nav-actions button:hover {
+    background-color: #777;
+}
+
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        background-color: #555;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+
+.nav-toggle {
+    display: none;
+}
+
+
+.nav-toggle span {
+    font-size: 1.5rem;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-content p {
+    font-size: 17px;
+    font-family: 'Times-Roman', sans-serif;
+    line-height: 2.0;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.right-content img {
+    width: 500px;
+    height: 600px;
+    object-fit:cover ;
+    border: 1px solid beige;
+    border-radius: 40px;
+    padding-right: 8px;
+}
+
+
+#Hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Hero .View {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 12px;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+#search-engine {
+    padding: 10px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    width: 300px;
+}
+
+#house select,
+#location-select {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    width: 100px;
+}
+
+#search-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #989de9;
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #d190be;
+}
+.world-view {
+   display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-between; /* Distribute space evenly between images */
+    align-items: center; /* Center the icons vertically */
+    margin-top: 10px; /* Optional: Add some space above the icons */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #Hero .View {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .left-content {
+        align-items:     flex-start;
+        padding: 10px;
+    }
+
+    .left-content p {
+        font-size: 18px;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    #search-engine {
+        width: 100%;
+    }
+
+    #house-select,
+    #location-select {
+        width: 100%;
+    }
+
+    #search-btn {
+        width: 100%;
+    }
+
+    .right-content img {
+        width: 90%;
+        height: auto;
+        max-width: 0px;
+        object-fit:scale-down;
+    }
+}
+
+.house option {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.house img {
+    width: 100px;
+    height: 100px;
+    object-fit:scale-down;
+    border: 1px solid rgb(221, 221, 76);
+    border-radius: 40px
+}
+
+
+/* CSS for avatar images */
+.avatar {
+    width: 50px; /* Set the width to 50 pixels */
+    height: 50px; /* Set the height to 50 pixels */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-right: 10px; /* Space between the avatar and the review text */
+    border: 2px solid #ccc; /* Optional: Add a border around the avatar */
+}
+
+/* CSS for footer icons */
+#footer-icons {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-between; /* Distribute space evenly between images */
+    align-items: center; /* Center the icons vertically */
+    margin-top: 10px; /* Optional: Add some space above the icons */
+    width: 100%;  /* Make the container take the full width of the screen */
+}
+
+#footer-icons img {
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+    margin: 0 0.5cm; /* Set horizontal space between the images */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    flex: 1; /* Allow images to grow and fill the available space */
+}
+
+/* Specific styles for the first two images */
+#footer-icons img:nth-child(1),
+#footer-icons img:nth-child(2) {
+    max-width: calc(33.33% - 1cm); /* Set a maximum width for the first two images, accounting for margins */
+}
+
+/* Specific style for the last image */
+#footer-icons img:nth-child(3) {
+    max-width: calc(33.33% - 1cm); /* Set a maximum width for the last image, accounting for margins */
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    padding: 40px; /* Add padding to the portfolio section */
+    text-align: center; /* Center the text in the section */
+}
+
+.our-options {
+    display: grid; /* Use grid layout for the images */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create a responsive grid */
+    gap: 0.5cm; /* Set gap between images to 0.5 cm */
+    justify-items: center; /* Center items in each grid cell */
+}
+
+.our-options img {
+    width: 100%; /* Make images fill the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+}
+
+/* Responsive styles for images */
+@media (max-width: 768px) {
+    .our-options {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .our-options img {
+        max-width: 90%; /* Full width for mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .our-options {
+        grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
+    }
+
+    .our-options img {
+        max-width: 100%; /* Ensure images fill the grid cell */
+    }
+}
