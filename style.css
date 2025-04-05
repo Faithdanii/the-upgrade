@@ -183,10 +183,10 @@ nav {
     background-color: #d190be;
 }
 .world-view {
-   display: flex; /* Use flexbox to arrange items in a row */
-    justify-content: space-between; /* Distribute space evenly between images */
-    align-items: center; /* Center the icons vertically */
-    margin-top: 10px; /* Optional: Add some space above the icons */
+   display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 10px; 
     width: 100%;
 }
 
